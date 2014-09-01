@@ -12,9 +12,6 @@ public class Servlet extends HttpServlet{
 	{
 		
 		String servletContext = servletConfig.getServletContext().getRealPath("/");
-		//StringBuffer fileBuffer = new StringBuffer();
-		//String pathString = servletContext.getContextPath();
-		//fileBuffer.append("");
 		System.out.println("pathString:"+servletContext);
 		System.out.println(System.getProperty("user.dir"));
 		System.out.println(ClassLoader.getSystemResource(""));
