@@ -7,13 +7,11 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
-    <base href="<%=basePath%>">
-    <title>link page</title>
-  </head>
-  
-  <body>
-  <a href="train/baseRep.jsp">基本报表测试</a><br/>
-  <a href="train/fatherAndSonRep.jsp">父子格测试</a><br/>
-  <a href="train/groupAndListRep.jsp">分组列表测试</a><br/>
-  </body>
+    <base href="<%=basePath%>"> 
+    <title>test</title>
+	</head>
+    <body>
+    <p>基本报表测试</p>
+     <iframe id="reportDemo"  name="reportDemo" width="1000" height="800" src="ReportServer?reportlet=train/fatherAndSonRep.cpt"></iframe> 
+     </body>
 </html>
