@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WorkBook xmlVersion="20130114" releaseVersion="7.0.4">
 <TableDataMap>
-<TableData name="baseRep" class="com.fr.data.impl.DBTableData">
+<TableData name="kuoZhan" class="com.fr.data.impl.DBTableData">
 <Parameters/>
 <Attributes maxMemRowCount="-1"/>
 <Connection class="com.fr.data.impl.NameDatabaseConnection">
@@ -9,7 +9,7 @@
 <![CDATA[FRDemo]]></DatabaseName>
 </Connection>
 <Query>
-<![CDATA[SELECT * FROM public.ccs_debit_detail]]></Query>
+<![CDATA[SELECT * FROM public.ccs_account]]></Query>
 </TableData>
 </TableDataMap>
 <Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
@@ -20,48 +20,33 @@
 <FC/>
 </ReportPageAttr>
 <RowHeight defaultValue="723900">
-<![CDATA[1143000,723900,723900,723900,723900,723900,723900,723900,723900,723900,723900]]></RowHeight>
+<![CDATA[723900,1485900,723900,723900,723900,952500,1981200,723900,723900,723900,723900]]></RowHeight>
 <ColumnWidth defaultValue="2743200">
-<![CDATA[2743200,5295900,2743200,5676900,4876800,4305300,2743200,2743200,2743200,2743200,2743200]]></ColumnWidth>
+<![CDATA[4076700,2743200,2743200,1828800,0,0,0,5448300,2743200,2743200,2743200]]></ColumnWidth>
 <CellElementList>
-<C c="0" r="0" cs="6" s="0">
+<C c="0" r="0" cs="3" s="0">
 <O>
-<![CDATA[商户营收报表p]]></O>
+<![CDATA[纵向扩展]]></O>
 <Expand/>
 </C>
 <C c="0" r="1" s="0">
 <O>
-<![CDATA[商户ID]]></O>
+<![CDATA[人员ID]]></O>
 <Expand/>
 </C>
 <C c="1" r="1" s="0">
 <O>
-<![CDATA[商户名称]]></O>
+<![CDATA[账户类型]]></O>
 <Expand/>
 </C>
-<C c="2" r="1" s="1">
+<C c="2" r="1" s="0">
 <O>
-<![CDATA[部门ID]]></O>
-<Expand/>
-</C>
-<C c="3" r="1" s="0">
-<O>
-<![CDATA[部门名称]]></O>
-<Expand/>
-</C>
-<C c="4" r="1" s="0">
-<O>
-<![CDATA[消费时间]]></O>
-<Expand/>
-</C>
-<C c="5" r="1" s="0">
-<O>
-<![CDATA[消费额]]></O>
+<![CDATA[账户余额]]></O>
 <Expand/>
 </C>
 <C c="0" r="2" s="0">
 <O t="DSColumn">
-<Attributes dsName="baseRep" columnName="merchant_id"/>
+<Attributes dsName="kuoZhan" columnName="person_id"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
@@ -70,63 +55,74 @@
 </C>
 <C c="1" r="2" s="0">
 <O t="DSColumn">
-<Attributes dsName="baseRep" columnName="merchant_name"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper">
-<Attr divideMode="2"/>
-</RG>
-<Parameters/>
-</O>
-<Expand dir="0"/>
-</C>
-<C c="2" r="2" s="0">
-<O t="DSColumn">
-<Attributes dsName="baseRep" columnName="dept_id"/>
+<Attributes dsName="kuoZhan" columnName="account_type"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <Expand dir="0"/>
 </C>
-<C c="3" r="2" s="0">
+<C c="2" r="2" s="1">
 <O t="DSColumn">
-<Attributes dsName="baseRep" columnName="dept_name"/>
+<Attributes dsName="kuoZhan" columnName="amount"/>
 <Complex/>
 <RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
-</O>
-<Expand dir="0"/>
-</C>
-<C c="4" r="2" s="0">
-<O t="DSColumn">
-<Attributes dsName="baseRep" columnName="debit_time"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
-<Parameters/>
-</O>
-<Expand dir="0"/>
-</C>
-<C c="5" r="2" s="2">
-<O t="DSColumn">
-<Attributes dsName="baseRep" columnName="price"/>
-<Complex/>
-<RG class="com.fr.report.cell.cellattr.core.group.SummaryGrouper">
-<FN>
-<![CDATA[com.fr.data.util.function.SumFunction]]></FN>
-</RG>
 <Result>
 <![CDATA[$$$/100]]></Result>
 <Parameters/>
 </O>
+<Expand dir="0"/>
+</C>
+<C c="0" r="5" cs="2" s="0">
+<O>
+<![CDATA[横向扩展]]></O>
+<Expand/>
+</C>
+<C c="0" r="6" s="0">
+<O t="BiasTextPainter">
+<IsBackSlash value="false"/>
+<![CDATA[账户类型|账户余额|人员ID]]></O>
+<Expand/>
+</C>
+<C c="1" r="6" s="0">
+<O t="DSColumn">
+<Attributes dsName="kuoZhan" columnName="account_type"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="1" leftParentDefault="false"/>
+</C>
+<C c="0" r="7" s="0">
+<O t="DSColumn">
+<Attributes dsName="kuoZhan" columnName="person_id"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Parameters/>
+</O>
+<Expand dir="0" leftParentDefault="false"/>
+</C>
+<C c="1" r="7" s="1">
+<O t="DSColumn">
+<Attributes dsName="kuoZhan" columnName="amount"/>
+<Complex/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
+<Result>
+<![CDATA[$$$/100]]></Result>
+<Parameters/>
+</O>
+<Expand dir="0"/>
+</C>
+<C c="0" r="11">
+<Expand/>
+</C>
+<C c="0" r="12">
 <Expand/>
 </C>
 </CellElementList>
 <ReportAttrSet>
 <ReportSettings headerHeight="0" footerHeight="0">
-<PaperSetting>
-<PaperSize width="38880000" height="42768000"/>
-<Margin top="986400" left="2743200" bottom="986400" right="2743200"/>
-</PaperSetting>
+<PaperSetting/>
 </ReportSettings>
 <Header reportPageType="0">
 <Background name="NullBackground"/>
@@ -158,19 +154,9 @@
 <Right style="1"/>
 </Border>
 </Style>
-<Style imageLayout="1">
-<FRFont name="SimSun" style="0" size="72"/>
-<Background name="NullBackground"/>
-<Border>
-<Top style="1"/>
-<Bottom style="1"/>
-<Left style="1"/>
-<Right style="1"/>
-</Border>
-</Style>
 <Style horizontal_alignment="0" imageLayout="1">
 <Format class="com.fr.base.CoreDecimalFormat">
-<![CDATA[#0.00]]></Format>
+<![CDATA[¤#0.00]]></Format>
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="NullBackground"/>
 <Border>

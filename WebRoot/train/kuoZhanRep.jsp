@@ -11,7 +11,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>test</title>
 	</head>
     <body>
-    <p>分组、列表报表测试</p>
-     <iframe id="reportDemo"  name="reportDemo" width="1000" height="800" src="ReportServer?reportlet=train/groupAndListRep.cpt"></iframe> 
+    <p>扩展报表测试</p>
+     <iframe id="reportDemo"  name="reportDemo" width="1000" height="800" src="ReportServer?reportlet=train/kuoZhanRep.cpt"></iframe> 
      </body>
 </html>

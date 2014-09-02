@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<WorkBook xmlVersion="20111025" releaseVersion="6.5.6">
+<WorkBook xmlVersion="20130114" releaseVersion="7.0.4">
 <TableDataMap>
 <TableData name="ds1" class="com.fr.data.impl.DBTableData">
 <Parameters/>
@@ -84,10 +84,10 @@
 </ToolBar>
 </ToolBarManager>
 </ToolBars>
-<WebPage isPage="false" isShowAsImage="false" isAutoScale="false"/>
+<WebPage isPage="false" isShowAsImage="false" isAutoScale="false" isTDHeavy="false"/>
 </WebPageContent>
 </ReportWebAttr>
-<Report class="com.fr.report.WorkSheet" name="sheet1">
+<Report class="com.fr.report.worksheet.WorkSheet" name="sheet1">
 <ReportPageAttr>
 <HR/>
 <FR/>
@@ -122,7 +122,7 @@
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="姓名"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <Expand dir="0" leftParentDefault="false" left="C8"/>
@@ -131,7 +131,7 @@
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="照片"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <Expand dir="0" leftParentDefault="false" left="C7"/>
@@ -148,10 +148,10 @@
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="雇员ID"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
-<Present class="com.fr.report.cellElement.BarcodePresent">
+<Present class="com.fr.report.cell.cellattr.BarcodePresent">
 <BarcodeAttr type="1" height="12" RCodeVersion="7" RCodeErrorCorrect="1" RcodeDrawPix="1"/>
 </Present>
 <Expand dir="0"/>
@@ -165,7 +165,7 @@
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="职务"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <Expand dir="0" leftParentDefault="false" left="C7"/>
@@ -179,7 +179,7 @@
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="出生日期"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <Expand dir="0" leftParentDefault="false" left="C8"/>
@@ -194,7 +194,7 @@
 <Attributes dsName="ds1" columnName="地址"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Result>
 <![CDATA[$$$]]></Result>
 <Parameters/>
@@ -210,7 +210,7 @@
 <O t="DSColumn">
 <Attributes dsName="ds1" columnName="邮政编码"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Parameters/>
 </O>
 <Expand dir="0" leftParentDefault="false" left="C7"/>
@@ -225,7 +225,7 @@
 <Attributes dsName="ds1" columnName="家庭电话"/>
 <Condition class="com.fr.data.condition.ListCondition"/>
 <Complex/>
-<RG class="com.fr.report.cellElement.core.FunctionGrouper"/>
+<RG class="com.fr.report.cell.cellattr.core.group.FunctionGrouper"/>
 <Result>
 <![CDATA[$$$ + "( 分机号：" + 分机 + ")"]]></Result>
 <Parameters/>
@@ -270,6 +270,11 @@
 </ReportAttrSet>
 <WorkSheetAttr direction="0" indexsToCopy="1" start="2" end="13" maxRowOrColumn="36"/>
 </Report>
+<ReportParameterAttr>
+<Attributes showWindow="true" delayPlaying="true" windowPosition="1" align="0"/>
+<PWTitle>
+<![CDATA[参数]]></PWTitle>
+</ReportParameterAttr>
 <StyleList>
 <Style horizontal_alignment="0" imageLayout="1">
 <FRFont name="SimSun" style="0" size="72"/>
@@ -319,14 +324,14 @@
 </Border>
 </Style>
 <Style horizontal_alignment="0" imageLayout="1">
-<Format class="java.text.DecimalFormat">
+<Format class="com.fr.base.CoreDecimalFormat">
 <![CDATA[#0.00]]></Format>
 <FRFont name="SimSun" style="0" size="72"/>
 <Background name="ColorBackground" color="-2624775"/>
 <Border/>
 </Style>
 <Style imageLayout="1">
-<Format class="java.text.DecimalFormat">
+<Format class="com.fr.base.CoreDecimalFormat">
 <![CDATA[#0.00]]></Format>
 <FRFont name="SimSun" style="0" size="72" foreground="-10066330"/>
 <Background name="ColorBackground" color="-2624775"/>
@@ -340,4 +345,6 @@
 </Border>
 </Style>
 </StyleList>
+<DesignerVersion DesignerVersion="HAE"/>
+<PreviewType PreviewType="0"/>
 </WorkBook>
