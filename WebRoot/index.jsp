@@ -20,5 +20,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <a href="train/muiltRep.jsp">多数据源报表测试</a><br/>
   <a href="train/biaoDanZhuZiRep.jsp">表单主子报表测试</a><br/>
   <a href="train/qianRuZhuZiRep.jsp">嵌入主子报表测试</a><br/>
+  <a href="train/geJianYunSuan.jsp">格间运算报表测试</a><br/>
+  <a href="train/shuJuZuanQu.jsp">数据钻取报表测试</a><br/>
+  <a href="train/tianBao.jsp">填报报表测试</a><br/>
   </body>
 </html>
